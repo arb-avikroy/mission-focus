@@ -46,21 +46,21 @@ export const GameScreen = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* Background */}
+      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
       
-      {/* Stars background */}
+      {/* Stars background with gold tint */}
       <div className="absolute inset-0">
         {Array.from({ length: 50 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-foreground/20 rounded-full"
+            className="absolute w-1 h-1 bg-primary/30 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              opacity: [0.2, 0.8, 0.2],
+              opacity: [0.2, 0.6, 0.2],
             }}
             transition={{
               duration: 2 + Math.random() * 2,
@@ -73,7 +73,7 @@ export const GameScreen = () => {
 
       {/* Game container */}
       <motion.div 
-        className={`relative w-full max-w-lg h-[70vh] max-h-[600px] rounded-2xl overflow-hidden shadow-card border border-border/50 bg-card ${isHit ? 'animate-shake' : ''}`}
+        className={`relative w-full max-w-lg h-[70vh] max-h-[600px] rounded-2xl overflow-hidden shadow-card border border-border bg-card ${isHit ? 'animate-shake' : ''}`}
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.4 }}
@@ -114,7 +114,7 @@ export const GameScreen = () => {
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-card via-card/80 to-transparent pointer-events-none" />
 
         {/* Mobile touch zones hint */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs text-muted-foreground/50 md:hidden">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs text-muted-foreground/40 md:hidden">
           <span>← Tap left</span>
           <span className="w-px h-3 bg-border" />
           <span>Tap right →</span>

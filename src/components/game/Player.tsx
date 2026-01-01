@@ -21,20 +21,20 @@ export const Player = ({ x, gameAreaWidth }: PlayerProps) => {
     >
       {/* Player ship/avatar */}
       <div className="relative">
-        {/* Glow effect */}
-        <div className="absolute inset-0 bg-accent/30 blur-lg rounded-full" />
+        {/* Glow effect - gold */}
+        <div className="absolute inset-0 bg-primary/40 blur-lg rounded-full" />
         
-        {/* Main body */}
-        <div className="relative w-full h-10 bg-gradient-to-t from-accent to-accent/80 rounded-t-full rounded-b-lg shadow-glow">
+        {/* Main body - gold gradient */}
+        <div className="relative w-full h-10 bg-gradient-to-t from-primary to-primary/70 rounded-t-full rounded-b-lg glow-accent">
           {/* Cockpit */}
-          <div className="absolute top-1 left-1/2 -translate-x-1/2 w-4 h-4 bg-foreground/20 rounded-full" />
+          <div className="absolute top-1 left-1/2 -translate-x-1/2 w-4 h-4 bg-background/30 rounded-full" />
           
           {/* Wings */}
-          <div className="absolute -left-2 bottom-0 w-3 h-6 bg-accent/80 rounded-l-full" />
-          <div className="absolute -right-2 bottom-0 w-3 h-6 bg-accent/80 rounded-r-full" />
+          <div className="absolute -left-2 bottom-0 w-3 h-6 bg-primary/80 rounded-l-full" />
+          <div className="absolute -right-2 bottom-0 w-3 h-6 bg-primary/80 rounded-r-full" />
           
-          {/* Engine glow */}
-          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-accent blur-md animate-pulse-slow" />
+          {/* Engine glow - warm gold */}
+          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary blur-md animate-pulse-slow" />
         </div>
       </div>
     </motion.div>

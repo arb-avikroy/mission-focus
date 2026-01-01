@@ -22,12 +22,12 @@ export const Obstacle = ({ obstacle }: ObstacleProps) => {
       {/* Obstacle body */}
       <div className="relative w-full h-full">
         {/* Glow */}
-        <div className="absolute inset-0 bg-destructive/20 blur-md rounded" />
+        <div className="absolute inset-0 bg-destructive/30 blur-md rounded" />
         
-        {/* Main shape */}
-        <div className="relative w-full h-full bg-gradient-to-b from-destructive to-destructive/80 rounded shadow-lg border border-destructive/50">
+        {/* Main shape - darker with red accent */}
+        <div className="relative w-full h-full bg-gradient-to-b from-destructive/90 to-destructive/70 rounded shadow-lg border border-destructive/40">
           {/* Inner details */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-destructive/50 rounded-sm" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-background/20 rounded-sm" />
         </div>
       </div>
     </motion.div>

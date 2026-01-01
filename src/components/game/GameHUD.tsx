@@ -9,7 +9,7 @@ interface GameHUDProps {
 export const GameHUD = ({ lives, score }: GameHUDProps) => {
   return (
     <motion.div 
-      className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 py-3 bg-gradient-to-b from-background/90 to-transparent"
+      className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 py-3 bg-gradient-to-b from-card/95 to-transparent"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2 }}
@@ -31,7 +31,7 @@ export const GameHUD = ({ lives, score }: GameHUDProps) => {
             }}
           >
             <Heart 
-              className={`w-6 h-6 ${i < lives ? 'fill-destructive text-destructive' : 'text-muted-foreground/50'}`}
+              className={`w-6 h-6 ${i < lives ? 'fill-primary text-primary' : 'text-muted-foreground/30'}`}
             />
           </motion.div>
         ))}
@@ -39,11 +39,11 @@ export const GameHUD = ({ lives, score }: GameHUDProps) => {
 
       {/* Score */}
       <motion.div 
-        className="flex items-center gap-2 bg-card/80 backdrop-blur-sm rounded-full px-4 py-1.5 shadow-soft border border-border/50"
+        className="flex items-center gap-2 bg-card/80 backdrop-blur-sm rounded-full px-4 py-1.5 shadow-soft border border-border"
         whileHover={{ scale: 1.02 }}
       >
         <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Score</span>
-        <span className="font-mono text-lg font-bold text-foreground tabular-nums">{score}</span>
+        <span className="font-mono text-lg font-bold text-primary tabular-nums">{score}</span>
       </motion.div>
     </motion.div>
   );

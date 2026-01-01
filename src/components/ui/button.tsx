@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,9 +15,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        game: "bg-accent text-accent-foreground hover:bg-accent/90 shadow-glow hover:shadow-lg font-semibold tracking-wide",
-        gameOutline: "border-2 border-accent/50 bg-transparent text-accent hover:bg-accent/10 hover:border-accent font-medium",
-        gameGhost: "bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground",
+        game: "bg-transparent border-2 border-primary text-primary hover:bg-primary/10 hover:border-primary/80 font-display text-lg tracking-wide glow-accent hover:glow-accent-strong",
+        gameOutline: "border border-primary/40 bg-transparent text-primary/80 hover:bg-primary/5 hover:border-primary/60 hover:text-primary font-display tracking-wide",
+        gameGhost: "bg-muted/30 text-muted-foreground hover:bg-muted/50 hover:text-foreground",
       },
       size: {
         default: "h-10 px-4 py-2",

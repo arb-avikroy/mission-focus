@@ -2,102 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 222 47% 11%;
+    --background: 0 0% 100%;
+    --foreground: 20 10% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 0 0% 98%;
+    --card-foreground: 20 10% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 20 10% 10%;
 
-    --primary: 215 50% 23%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 32 45% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 93%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 30 15% 90%;
+    --secondary-foreground: 20 10% 10%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 30 10% 94%;
+    --muted-foreground: 20 10% 45%;
 
-    --accent: 186 100% 42%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 32 45% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     --success: 142 76% 36%;
-    --success-foreground: 210 40% 98%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 186 100% 42%;
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 32 45% 55%;
 
     --radius: 0.75rem;
-
-    /* Game-specific tokens */
-    --game-bg: 220 25% 10%;
-    --game-surface: 220 25% 15%;
-    --game-border: 220 20% 25%;
-    --game-glow: 186 100% 50%;
-    --game-danger: 0 72% 51%;
-    --game-player: 186 100% 42%;
-    --game-obstacle: 0 72% 55%;
-
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(220 25% 10% / 0.1);
-    --shadow-card: 0 8px 32px -8px hsl(220 25% 10% / 0.15);
-    --shadow-glow: 0 0 40px hsl(186 100% 42% / 0.2);
-
-    /* Gradients */
-    --gradient-radial: radial-gradient(circle at 50% 0%, hsl(220 25% 15%) 0%, hsl(220 25% 8%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 98%) 100%);
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 220 25% 8%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 4%;
+    --foreground: 40 20% 90%;
 
-    --card: 220 25% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 7%;
+    --card-foreground: 40 20% 90%;
 
-    --popover: 220 25% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 40 20% 90%;
 
-    --primary: 186 100% 42%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 32 50% 60%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 220 25% 18%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 40 20% 85%;
 
-    --muted: 220 25% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 40 10% 55%;
 
-    --accent: 186 100% 42%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 32 50% 60%;
+    --accent-foreground: 0 0% 5%;
 
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 20%;
-    --ring: 186 100% 42%;
+    --border: 32 20% 18%;
+    --input: 32 20% 18%;
+    --ring: 32 50% 60%;
 
-    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
-    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
+    /* Game-specific tokens */
+    --game-bg: 0 0% 3%;
+    --game-surface: 0 0% 6%;
+    --game-border: 32 30% 20%;
+    --game-glow: 32 60% 50%;
+    --game-danger: 0 72% 50%;
+    --game-player: 32 60% 55%;
+    --game-obstacle: 0 65% 50%;
+
+    /* Shadows with gold glow */
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 30px hsl(32 60% 50% / 0.25);
+    --shadow-glow-strong: 0 0 50px hsl(32 60% 50% / 0.4);
+
+    /* Gradients */
+    --gradient-radial: radial-gradient(circle at 50% 0%, hsl(0 0% 8%) 0%, hsl(0 0% 3%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 9%) 0%, hsl(0 0% 6%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(32 50% 55%) 0%, hsl(32 60% 65%) 100%);
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 40 10% 70%;
+    --sidebar-primary: 32 50% 60%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 40 20% 85%;
+    --sidebar-border: 32 20% 15%;
+    --sidebar-ring: 32 50% 60%;
   }
 }
 
@@ -125,15 +122,23 @@
   .card-elevated {
     background: var(--gradient-surface);
     box-shadow: var(--shadow-card);
-    @apply rounded-2xl border border-border/50;
+    @apply rounded-2xl border border-border;
   }
 
   .glow-accent {
     box-shadow: var(--shadow-glow);
   }
 
+  .glow-accent-strong {
+    box-shadow: var(--shadow-glow-strong);
+  }
+
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
   .text-mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
   }
 }
 
@@ -154,6 +159,10 @@
     animation: flashRed 0.3s ease-out;
   }
 
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -169,5 +178,10 @@
   @keyframes flashRed {
     0% { background-color: hsl(0 72% 51% / 0.3); }
     100% { background-color: transparent; }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(32 60% 50% / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(32 60% 50% / 0.5); }
   }
 }

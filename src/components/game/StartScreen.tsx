@@ -48,6 +48,14 @@ export const StartScreen = () => {
           >
             <Rocket className="w-8 h-8 text-primary" />
           </motion.div>
+          <motion.p 
+            className="text-muted-foreground leading-relaxed mb-8 text-sm"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            AdventurousInvestorHub <span className="text-primary font-medium">Presents</span>
+          </motion.p>
 
           {/* Title */}
           <motion.h1 
@@ -102,6 +110,14 @@ export const StartScreen = () => {
             transition={{ delay: 0.7 }}
           >
             Use <kbd className="px-1.5 py-0.5 bg-muted/50 border border-border rounded text-foreground/70 font-mono text-[10px]">←</kbd> <kbd className="px-1.5 py-0.5 bg-muted/50 border border-border rounded text-foreground/70 font-mono text-[10px]">→</kbd> or <kbd className="px-1.5 py-0.5 bg-muted/50 border border-border rounded text-foreground/70 font-mono text-[10px]">A</kbd> <kbd className="px-1.5 py-0.5 bg-muted/50 border border-border rounded text-foreground/70 font-mono text-[10px]">D</kbd> to move • Swipe on mobile
+          </motion.p>
+          <motion.p 
+            className="text-muted-foreground leading-relaxed mb-8 text-sm"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            Made with ♥ <span className="text-primary font-medium">Avik Roy Barman</span>
           </motion.p>
         </div>
       </motion.div>
